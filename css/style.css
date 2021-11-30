@@ -177,7 +177,7 @@ textarea.input {
 
 .input-number .qty-up:hover, .input-number .qty-down:hover {
   background-color: #E4E7ED;
-  color: #D10024;
+  color: #e80b95;
 }
 
 /*-- Select input --*/
