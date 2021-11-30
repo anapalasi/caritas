@@ -4,7 +4,7 @@ Author: yaminncco
 
 Colors:
 	Body 		: #333
-	Headers 	: #2B2D42
+	Headers 	: #0e5a90
 	Primary 	: #D10024
 	Dark 		: #15161D ##1E1F29
 	Grey 		: #E4E7ED #FBFBFC #8D99AE #B9BABC
@@ -62,7 +62,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #2B2D42;
+  color: #0e5a90;
   font-weight: 700;
   margin: 0 0 10px;
 }
