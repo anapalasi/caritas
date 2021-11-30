@@ -58,7 +58,7 @@ Table OF Contents
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  color: #005c97;
+  color: #333;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -413,7 +413,7 @@ textarea.input {
 #top-header {
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #1E1F29;
+  background-color: #0a5c91;
 }
 
 .header-links li {
@@ -446,7 +446,7 @@ textarea.input {
 #header {
   padding-top: 15px;
   padding-bottom: 15px;
-  background-color: #15161D;
+  background-color: #0a5c91;
 }
 
 .header-logo {
