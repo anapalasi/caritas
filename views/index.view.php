@@ -116,7 +116,7 @@
 											echo "<h5>SUBTOTAL: $2940.00</h5>";
 										echo "</div>";
 										echo "<div class=\"cart-btns\">";
-											echo "<a href=\"#\">Ver cesta</a>";
+											echo "<a href=\"viewCart.php\"> Ver cesta</a>";
 											echo "<a href=\"#\">Comprar  <i class=\"fa fa-arrow-circle-right\"></i></a>";
 										echo "</div>";
 									echo "</div>";
@@ -258,7 +258,7 @@
 												
 											echo "</div>";
 											echo "<div class=\"add-to-cart\">";
-												echo "<button class=\"add-to-cart-btn\" name=\"btn1\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+												echo "<button class=\"add-to-cart-btn\" name=\"btn1\"><i class=\"fa fa-shopping-cart\"></i><a href=\"cartAction.php?action=addToCart&id=1\">  Añade al carrito</a></button>";
 											echo "</div>";
 										echo "</div>";
 										//<!-- /product -->
@@ -278,7 +278,7 @@
 											
 											echo "</div>";
 											echo "<div class=\"add-to-cart\">";
-												echo "<button class=\"add-to-cart-btn\" name=\"btn2\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+												echo "<button class=\"add-to-cart-btn\" name=\"btn2\"><i class=\"fa fa-shopping-cart\"></i><a href=\"cartAction.php?action=addToCart&id=2\"> Añade al carrito</a></button>";
 											echo "</div>";
 										echo "</div>";
 										//<!-- /product -->
@@ -294,7 +294,7 @@
 												
 											echo "</div>";
 											echo "<div class=\"add-to-cart\">";
-												echo "<button class=\"add-to-cart-btn\" name=\"btn3\"> <i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+												echo "<button class=\"add-to-cart-btn\" name=\"btn3\"> <i class=\"fa fa-shopping-cart\"></i> <a href=\"cartAction.php?action=addToCart&id=3\"> Añade al carrito</a></button>";
 											echo "</div>";
 										echo "</div>";
 										//<!-- /product -->
@@ -310,7 +310,7 @@
 											
 											echo "</div>";
 											echo "<div class=\"add-to-cart\">";
-												echo "<button class=\"add-to-cart-btn\" name=\"btn4\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+												echo "<button class=\"add-to-cart-btn\" name=\"btn4\"><i class=\"fa fa-shopping-cart\"></i> <a href=\"cartAction.php?action=addToCart&id=4\"> Añade al carrito</a></button>";
 											echo "</div>";
 										echo "</div>";
 										//<!-- /product -->
@@ -327,7 +327,8 @@
 				//<!-- /row -->
 			echo "</div>";
 				//<!-- row -->
-			echo "<div class=\"row\">";
+				echo "<br><br>";			
+				echo "<div class=\"row\">";
 
 					//<!-- section title -->
 					echo "<div class=\"col-md-12\">";
@@ -357,7 +358,7 @@
 												
 											echo "</div>";
 											echo "<div class=\"add-to-cart\">";
-												echo "<button class=\"add-to-cart-btn\" name=\"btn5\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+												echo "<button class=\"add-to-cart-btn\" name=\"btn5\"><i class=\"fa fa-shopping-cart\"></i> <a href=\"cartAction.php?action=addToCart&id=5\"> Añade al carrito</a></button>";
 											echo "</div>";
 										echo "</div>";
 										// <!-- /product -->
@@ -375,7 +376,7 @@
 											
 											echo "</div>";
 											echo "<div class=\"add-to-cart\">";
-												echo "<button class=\"add-to-cart-btn\" name=\"btn6\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+												echo "<button class=\"add-to-cart-btn\" name=\"btn6\"><i class=\"fa fa-shopping-cart\"></i><a href=\"cartAction.php?action=addToCart&id=6\">  Añade al carrito</a></button>";
 											echo "</div>";
 										echo "</div>";
 										//<!-- /product -->
@@ -393,7 +394,7 @@
 											
 											echo "</div>";
 											echo "<div class=\"add-to-cart\">";
-												echo "<button class=\"add-to-cart-btn\" name=\"btn7\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+												echo "<button class=\"add-to-cart-btn\" name=\"btn7\"><i class=\"fa fa-shopping-cart\"></i> <a href=\"cartAction.php?action=addToCart&id=7\"> Añade al carrito</a></button>";
 											echo "</div>";
 										echo "</div>";
 										//<!-- /product -->
@@ -411,7 +412,7 @@
 											
 											echo "</div>";
 											echo "<div class=\"add-to-cart\">";
-												echo "<button class=\"add-to-cart-btn\" name=\"btn8\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+												echo "<button class=\"add-to-cart-btn\" name=\"btn8\"><i class=\"fa fa-shopping-cart\"></i><a href=\"cartAction.php?action=addToCart&id=8\">  Añade al carrito</a></button>";
 											echo "</div>";
 										echo "</div>";
 										// <!-- /product -->
@@ -426,6 +427,7 @@
 				echo "</div>";
 				//<!-- /row -->
 			echo "</div>";
+			echo "<br><br>";
 			echo "<div class=\"row\">";
 
 				//<!-- section title -->
@@ -457,7 +459,7 @@
 											
 										echo "</div>";
 										echo "<div class=\"add-to-cart\">";
-											echo "<button class=\"add-to-cart-btn\" name=\"btn9\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+											echo "<button class=\"add-to-cart-btn\" name=\"btn9\"><i class=\"fa fa-shopping-cart\"></i> <a href=\"cartAction.php?action=addToCart&id=9\"> Añade al carrito</a></button>";
 										echo "</div>";
 									echo "</div>";
 									// <!-- /product -->
@@ -474,11 +476,11 @@
 										
 										echo "</div>";
 										echo "<div class=\"add-to-cart\">";
-											echo "<button class=\"add-to-cart-btn\" name=\"btn10\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+											echo "<button class=\"add-to-cart-btn\" name=\"btn10\"><i class=\"fa fa-shopping-cart\"></i><a href=\"cartAction.php?action=addToCart&id=10\">  Añade al carrito</a></button>";
 										echo "</div>";
 									echo "</div>";
 								//	<!-- /product -->
-
+									
 									// <!-- product -->
 									echo "<div class=\"product\">";
 										echo "<div class=\"product-img\">";
@@ -492,7 +494,7 @@
 										
 										echo "</div>";
 										echo "<div class=\"add-to-cart\">";
-											echo "<button class=\"add-to-cart-btn\" name=\"btn11\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+											echo "<button class=\"add-to-cart-btn\" name=\"btn11\"><i class=\"fa fa-shopping-cart\"></i><a href=\"cartAction.php?action=addToCart&id=11\">  Añade al carrito</a></button>";
 										echo "</div>";
 									echo "</div>";
 						//			<!-- /product -->
@@ -509,6 +511,7 @@
 			echo "</div>";
 			//<!-- /row -->
 		echo "</div>";
+		echo "<br><br>";
 		echo "<div class=\"row\">";
 
 			//<!-- section title -->
@@ -540,7 +543,7 @@
 										
 									echo "</div>";
 									echo "<div class=\"add-to-cart\">";
-										echo "<button class=\"add-to-cart-btn\" name=\"btn12\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+										echo "<button class=\"add-to-cart-btn\" name=\"btn12\"><i class=\"fa fa-shopping-cart\"></i><a href=\"cartAction.php?action=addToCart&id=12\">  Añade al carrito</a></button>";
 									echo "</div>";
 								echo "</div>";
 								// <!-- /product -->
@@ -557,7 +560,7 @@
 									
 									echo "</div>";
 									echo "<div class=\"add-to-cart\">";
-										echo "<button class=\"add-to-cart-btn\" name=\"btn13\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+										echo "<button class=\"add-to-cart-btn\" name=\"btn13\"><i class=\"fa fa-shopping-cart\"></i> <a href=\"cartAction.php?action=addToCart&id=13\">  Añade al carrito</a></button>";
 									echo "</div>";
 								echo "</div>";
 								//<!-- /product -->
@@ -575,7 +578,7 @@
 									
 									echo "</div>";
 									echo "<div class=\"add-to-cart\">";
-										echo "<button class=\"add-to-cart-btn\" name=\"btn14\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+										echo "<button class=\"add-to-cart-btn\" name=\"btn14\"><i class=\"fa fa-shopping-cart\"></i> <a href=\"cartAction.php?action=addToCart&id=14\">  Añade al carrito</a></button>";
 									echo "</div>";
 								echo "</div>";
 								// <!-- /product -->
@@ -590,6 +593,7 @@
 			echo "</div>";
 		//	<!-- Products tab & slick -->
 		echo "</div>";
+		echo "<br><br><br>";
 		//<!-- /row -->
 		echo "<div class=\"row\">";
 			echo "<div class=\"products-tabs\">";
@@ -609,7 +613,7 @@
 								
 							echo "</div>";
 							echo "<div class=\"add-to-cart\">";
-								echo "<button class=\"add-to-cart-btn\" name=\"btn15\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+								echo "<button class=\"add-to-cart-btn\" name=\"btn15\"><i class=\"fa fa-shopping-cart\"></i> <a href=\"cartAction.php?action=addToCart&id=15\">  Añade al carrito</a></button>";
 							echo "</div>";
 						echo "</div>";
 						//<!-- /product -->
@@ -627,7 +631,7 @@
 							
 							echo "</div>";
 							echo "<div class=\"add-to-cart\">";
-								echo "<button class=\"add-to-cart-btn\" name=\"btn16\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+								echo "<button class=\"add-to-cart-btn\" name=\"btn16\"><i class=\"fa fa-shopping-cart\"></i><a href=\"cartAction.php?action=addToCart&id=16\">  Añade al carrito</a></button>";
 							echo "</div>";
 						echo "</div>";
 						// <!-- /product -->
@@ -645,7 +649,7 @@
 							
 							echo "</div>";
 							echo "<div class=\"add-to-cart\">";
-								echo "<button class=\"add-to-cart-btn\" name=\"btn17\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+								echo "<button class=\"add-to-cart-btn\" name=\"btn17\"><i class=\"fa fa-shopping-cart\"></i> <a href=\"cartAction.php?action=addToCart&id=17\">  Añade al carrito</a></button>";
 							echo "</div>";
 						echo "</div>";
 					//<!-- /product -->
@@ -663,6 +667,7 @@ echo "</div>";
 //<!-- /row -->
 echo "</div>";
 	echo "</div>";
+	echo "<br><br>";
 	echo "<div class=\"row\">";
 
 		// <!-- section title -->
@@ -694,7 +699,7 @@ echo "</div>";
 											
 										echo "</div>";
 										echo "<div class=\"add-to-cart\">";
-											echo "<button class=\"add-to-cart-btn\" name=\"btn18\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+											echo "<button class=\"add-to-cart-btn\" name=\"btn18\"><i class=\"fa fa-shopping-cart\"></i> <a href=\"cartAction.php?action=addToCart&id=18\">  Añade al carrito</a></button>";
 										echo "</div>";
 									echo "</div>";
 							//		<!-- /product -->
@@ -711,7 +716,7 @@ echo "</div>";
 										
 										echo "</div>";
 										echo "<div class=\"add-to-cart\">";
-											echo "<button class=\"add-to-cart-btn\" name=\"btn19\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+											echo "<button class=\"add-to-cart-btn\" name=\"btn19\"><i class=\"fa fa-shopping-cart\"></i> <a href=\"cartAction.php?action=addToCart&id=19\">  Añade al carrito</a></button>";
 										echo "</div>";
 									echo "</div>";
 									// <!-- /product -->
@@ -729,7 +734,7 @@ echo "</div>";
 										
 										echo "</div>";
 										echo "<div class=\"add-to-cart\">";
-											echo "<button class=\"add-to-cart-btn\" name=\"btn20\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+											echo "<button class=\"add-to-cart-btn\" name=\"btn20\"><i class=\"fa fa-shopping-cart\"></i><a href=\"cartAction.php?action=addToCart&id=20\">  Añade al carrito</a></button>";
 										echo "</div>";
 									echo "</div>";
 									//<!-- /product -->
@@ -746,7 +751,7 @@ echo "</div>";
 									
 									echo "</div>";
 									echo "<div class=\"add-to-cart\">";
-										echo "<button class=\"add-to-cart-btn\" name=\"btn21\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+										echo "<button class=\"add-to-cart-btn\" name=\"btn21\"><i class=\"fa fa-shopping-cart\"></i> <a href=\"cartAction.php?action=addToCart&id=21\">  Añade al carrito</a></button>";
 									echo "</div>";
 								echo "</div>";
 							//	<!-- /product -->
@@ -760,7 +765,7 @@ echo "</div>";
 			//	<!-- Products tab & slick -->
 			echo "</div>";
 			//<!-- /row -->
-		
+			echo "<br><br>";
 			echo "<div class=\"row\">";
 
 			//	<!-- section title -->
@@ -792,7 +797,7 @@ echo "</div>";
 											
 										echo "</div>";
 										echo "<div class=\"add-to-cart\">";
-											echo "<button class=\"add-to-cart-btn\" name=\"btn22\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+											echo "<button class=\"add-to-cart-btn\" name=\"btn22\"><i class=\"fa fa-shopping-cart\"></i><a href=\"cartAction.php?action=addToCart&id=22\">  Añade al carrito</a></button>";
 										echo "</div>";
 									echo "</div>";
 									//<!-- /product -->
@@ -810,7 +815,7 @@ echo "</div>";
 										
 										echo "</div>";
 										echo "<div class=\"add-to-cart\">";
-											echo "<button class=\"add-to-cart-btn\" name=\"btn23\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito </button>";
+											echo "<button class=\"add-to-cart-btn\" name=\"btn23\"><i class=\"fa fa-shopping-cart\"></i> <a href=\"cartAction.php?action=addToCart&id=23\">  Añade al carrito</a> </button>";
 										//	echo "<button class="\add-to-cart-btn\" name=\"btn23\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
 										echo "</div>";
 									echo "</div>";
@@ -829,7 +834,7 @@ echo "</div>";
 										
 										echo "</div>";
 										echo "<div class=\"add-to-cart\">";
-											echo "<button class=\"add-to-cart-btn\" name=\"btn24\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+											echo "<button class=\"add-to-cart-btn\" name=\"btn24\"><i class=\"fa fa-shopping-cart\"></i> <a href=\"cartAction.php?action=addToCart&id=24\">  Añade al carrito</a></button>";
 										echo "</div>";
 									echo "</div>";
 									//<!-- /product -->
@@ -845,6 +850,8 @@ echo "</div>";
 			echo "</div>";
 			//<!-- /row -->
 	//<!-- /row -->
+	echo "</div>";
+	echo "<br><br><br>";
 	echo "<div class=\"row\">";
 
 	//	<!-- section title -->
@@ -876,7 +883,7 @@ echo "</div>";
 									
 								echo "</div>";
 								echo "<div class=\"add-to-cart\">";
-									echo "<button class=\"add-to-cart-btn\" name=\"btn25\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+									echo "<button class=\"add-to-cart-btn\" name=\"btn25\"><i class=\"fa fa-shopping-cart\"></i> <a href=\"cartAction.php?action=addToCart&id=25\">  Añade al carrito</a></button>";
 								echo "</div>";
 							echo "</div>";
 						//	<!-- /product -->
@@ -894,7 +901,7 @@ echo "</div>";
 								
 								echo "</div>";
 								echo "<div class=\"add-to-cart\">";
-									echo "<button class=\"add-to-cart-btn\" name=\"btn26\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+									echo "<button class=\"add-to-cart-btn\" name=\"btn26\"><i class=\"fa fa-shopping-cart\"></i> <a href=\"cartAction.php?action=addToCart&id=26\">  Añade al carrito</a></button>";
 								echo "</div>";
 							echo "</div>";
 				//			<!-- /product -->
@@ -912,7 +919,7 @@ echo "</div>";
 								
 								echo "</div>";
 								echo "<div class=\"add-to-cart\">";
-									echo "<button class=\"add-to-cart-btn\" name=\"btn27\"><i class=\"fa fa-shopping-cart\"></i> Añade al carrito</button>";
+									echo "<button class=\"add-to-cart-btn\" name=\"btn27\"><i class=\"fa fa-shopping-cart\"></i> <a href=\"cartAction.php?action=addToCart&id=27\">  Añade al carrito</a></button>";
 								echo "</div>";
 							echo "</div>";
 							//<!-- /product -->
@@ -932,7 +939,7 @@ echo "</div>";
 		echo "</div>";
 	//	<!-- /SECTION -->
 
-		
+	echo "<br><br><br>";
 	//	<!-- FOOTER -->
 		echo "<footer id=\"footer\">";
 			//<!-- top footer -->
