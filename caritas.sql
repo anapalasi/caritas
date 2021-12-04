@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.6deb5ubuntu0.5
+-- version 4.9.5deb2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 03-12-2021 a las 10:34:43
--- Versión del servidor: 5.7.31-0ubuntu0.18.04.1
--- Versión de PHP: 7.2.24-0ubuntu0.18.04.6
+-- Temps de generació: 04-12-2021 a les 21:02:30
+-- Versió del servidor: 8.0.27-0ubuntu0.20.04.1
+-- Versió de PHP: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,22 +19,22 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `caritas`
+-- Base de dades: `caritas`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Categoria`
+-- Estructura de la taula `Categoria`
 --
 
 CREATE TABLE `Categoria` (
-  `id_categoria` int(11) NOT NULL,
+  `id_categoria` int NOT NULL,
   `descripcion` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `Categoria`
+-- Bolcament de dades per a la taula `Categoria`
 --
 
 INSERT INTO `Categoria` (`id_categoria`, `descripcion`) VALUES
@@ -47,65 +49,66 @@ INSERT INTO `Categoria` (`id_categoria`, `descripcion`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `CestaCompra`
+-- Estructura de la taula `CestaCompra`
 --
 
 CREATE TABLE `CestaCompra` (
-  `id_cesta` int(11) NOT NULL,
+  `id_cesta` int NOT NULL,
   `fecha` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `LineaCesta`
+-- Estructura de la taula `LineaCesta`
 --
 
 CREATE TABLE `LineaCesta` (
-  `id_cesta` int(11) NOT NULL,
-  `id_producto` int(11) NOT NULL,
+  `id_cesta` int NOT NULL,
+  `id_producto` int NOT NULL,
   `cantidad` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `LineaPedido`
+-- Estructura de la taula `LineaPedido`
 --
 
 CREATE TABLE `LineaPedido` (
-  `id_pedido` int(11) NOT NULL,
-  `id_producto` int(11) NOT NULL,
+  `id_pedido` int NOT NULL,
+  `id_producto` int NOT NULL,
   `precio` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Pedido`
+-- Estructura de la taula `Pedido`
 --
 
 CREATE TABLE `Pedido` (
-  `id_pedido` int(11) NOT NULL,
-  `fecha` date NOT NULL
+  `id_pedido` int NOT NULL,
+  `fecha` date NOT NULL,
+  `precio_total` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Producto`
+-- Estructura de la taula `Producto`
 --
 
 CREATE TABLE `Producto` (
-  `id_producto` int(11) NOT NULL,
+  `id_producto` int NOT NULL,
   `descripcion` varchar(100) NOT NULL,
   `precio` float NOT NULL,
   `imagen` varchar(150) NOT NULL,
-  `id_categoria` int(11) NOT NULL
+  `id_categoria` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `Producto`
+-- Bolcament de dades per a la taula `Producto`
 --
 
 INSERT INTO `Producto` (`id_producto`, `descripcion`, `precio`, `imagen`, `id_categoria`) VALUES
@@ -138,95 +141,106 @@ INSERT INTO `Producto` (`id_producto`, `descripcion`, `precio`, `imagen`, `id_ca
 (27, 'Pot de tomata', 1, 'tomata.jpg', 7);
 
 --
--- Índices para tablas volcadas
+-- Índexs per a les taules bolcades
 --
 
 --
--- Indices de la tabla `Categoria`
+-- Índexs per a la taula `Categoria`
 --
 ALTER TABLE `Categoria`
   ADD PRIMARY KEY (`id_categoria`);
 
 --
--- Indices de la tabla `CestaCompra`
+-- Índexs per a la taula `CestaCompra`
 --
 ALTER TABLE `CestaCompra`
   ADD PRIMARY KEY (`id_cesta`);
 
 --
--- Indices de la tabla `LineaCesta`
+-- Índexs per a la taula `LineaCesta`
 --
 ALTER TABLE `LineaCesta`
   ADD PRIMARY KEY (`id_cesta`,`id_producto`),
   ADD KEY `id_producto` (`id_producto`);
 
 --
--- Indices de la tabla `LineaPedido`
+-- Índexs per a la taula `LineaPedido`
 --
 ALTER TABLE `LineaPedido`
   ADD PRIMARY KEY (`id_pedido`,`id_producto`),
   ADD KEY `id_producto` (`id_producto`);
 
 --
--- Indices de la tabla `Pedido`
+-- Índexs per a la taula `Pedido`
 --
 ALTER TABLE `Pedido`
   ADD PRIMARY KEY (`id_pedido`);
 
 --
--- Indices de la tabla `Producto`
+-- Índexs per a la taula `Producto`
 --
 ALTER TABLE `Producto`
   ADD PRIMARY KEY (`id_producto`),
   ADD KEY `id_categoria` (`id_categoria`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT per les taules bolcades
 --
 
 --
--- AUTO_INCREMENT de la tabla `Categoria`
+-- AUTO_INCREMENT per la taula `Categoria`
 --
 ALTER TABLE `Categoria`
-  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_categoria` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
--- AUTO_INCREMENT de la tabla `CestaCompra`
+-- AUTO_INCREMENT per la taula `CestaCompra`
 --
 ALTER TABLE `CestaCompra`
-  MODIFY `id_cesta` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT de la tabla `Pedido`
---
-ALTER TABLE `Pedido`
-  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT de la tabla `Producto`
---
-ALTER TABLE `Producto`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
---
--- Restricciones para tablas volcadas
---
+  MODIFY `id_cesta` int NOT NULL AUTO_INCREMENT;
 
 --
--- Filtros para la tabla `LineaCesta`
+-- AUTO_INCREMENT per la taula `LineaCesta`
 --
 ALTER TABLE `LineaCesta`
-  ADD CONSTRAINT `LineaCesta_ibfk_1` FOREIGN KEY (`id_cesta`) REFERENCES `CestaCompra` (`id_cesta`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `LineaCesta_ibfk_2` FOREIGN KEY (`id_producto`) REFERENCES `Producto` (`id_producto`) ON DELETE NO ACTION ON UPDATE CASCADE;
+  MODIFY `id_cesta` int NOT NULL AUTO_INCREMENT;
 
 --
--- Filtros para la tabla `LineaPedido`
+-- AUTO_INCREMENT per la taula `Pedido`
+--
+ALTER TABLE `Pedido`
+  MODIFY `id_pedido` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT per la taula `Producto`
+--
+ALTER TABLE `Producto`
+  MODIFY `id_producto` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
+-- Restriccions per a les taules bolcades
+--
+
+--
+-- Restriccions per a la taula `LineaCesta`
+--
+ALTER TABLE `LineaCesta`
+  ADD CONSTRAINT `LineaCesta_ibfk_1` FOREIGN KEY (`id_producto`) REFERENCES `Producto` (`id_producto`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `LineaCesta_ibfk_2` FOREIGN KEY (`id_cesta`) REFERENCES `CestaCompra` (`id_cesta`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Restriccions per a la taula `LineaPedido`
 --
 ALTER TABLE `LineaPedido`
   ADD CONSTRAINT `LineaPedido_ibfk_1` FOREIGN KEY (`id_pedido`) REFERENCES `Pedido` (`id_pedido`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `LineaPedido_ibfk_2` FOREIGN KEY (`id_producto`) REFERENCES `Producto` (`id_producto`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Filtros para la tabla `Producto`
+-- Restriccions per a la taula `Producto`
 --
 ALTER TABLE `Producto`
-  ADD CONSTRAINT `Producto_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `Categoria` (`id_categoria`) ON DELETE NO ACTION ON UPDATE CASCADE;
+  ADD CONSTRAINT `Producto_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `Categoria` (`id_categoria`) ON UPDATE CASCADE;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
