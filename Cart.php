@@ -111,6 +111,8 @@
                     // prep the quantity
                     if(isset($item['qty'])){
                         $item['qty'] = (float) $item['qty'];
+
+			echo "Quantitat ". $item['qty'];			
                         // remove the item from the cart, if quantity is zero
                         if ($item['qty'] == 0){
                             unset($this->cart_contents[$item['rowid']]);
@@ -183,5 +185,6 @@
             unset($_SESSION['cart_contents']);
         }
 
+        
   }
 ?>

@@ -26,11 +26,6 @@
         $redirectLoc = $insertItem?'viewCart.php':'index.php';
         header("Location: ".$redirectLoc);
         }
-    }
-       
-       
-       /* 
-       
         
        
     }elseif($_REQUEST['action'] == 'updateCartItem' && !empty($_REQUEST['id'])){
@@ -38,9 +33,10 @@
             'rowid' => $_REQUEST['id'],
             'qty' => $_REQUEST['qty']
         );
+        
         $updateItem = $cart->update($itemData);
-        echo $updateItem?'ok':'err';die;*/
-    
+        echo $updateItem?'ok':'err';die;
+    }
    /* }elseif($_REQUEST['action'] == 'removeCartItem' && !empty($_REQUEST['id'])){
         $deleteItem = $cart->remove($_REQUEST['id']);
         header("Location: viewCart.php");

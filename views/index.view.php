@@ -1,5 +1,8 @@
 <?php
 	session_start();
+
+	include 'Cart.php';
+	
 	echo " <!DOCTYPE html>";
 	echo "<html lang=\"ca\">";
 	echo "<head>";

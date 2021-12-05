@@ -35,12 +35,13 @@ $cart = new Cart;
     </style>
     <script>
     function updateCartItem(obj,id){
+
         $.get("cartAction.php", {action:"updateCartItem", id:id, qty:obj.value}, function(data){
-            if(data == 'ok'){
+	  if(data == 'ok'){
                 location.reload();
-            }else{
-                alert('Cart update failed, please try again.');
-            }
+          }else{
+             alert('No s\' ha pogut actualitzar');
+          }
         });
     }
     </script>
@@ -98,7 +99,7 @@ $cart = new Cart;
             <td><input type="number" class="form-control text-center" value="<?php echo $item["qty"]; ?>" onchange="updateCartItem(this, '<?php echo $item["rowid"]; ?>')"></td>
             <td><?php echo $item["subtotal"].' €'; ?></td>
             <td>
-                <a href="cartAction.php?action=removeCartItem&id=<?php echo $item["rowid"]; ?>" class="btn btn-danger" onclick="return confirm('Estàs segur?')"><i class="glyphicon glyphicon-trash"></i></a>
+                <a href="cartAction.php?action=removeCartItem&id=<?php echo $item["rowid"]; ?>" class="btn btn-danger" onclick="return confirm('Estàs segur d\'esborrar-lo?')"><i class="glyphicon glyphicon-trash"></i></a>
             </td>   
         </tr>
         <?php } }else{ ?>
