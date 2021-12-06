@@ -37,12 +37,12 @@ $cart = new Cart;
     function updateCartItem(obj,id){
 
         $.get("cartAction.php", {action:"updateCartItem", id:id, qty:obj.value}, function(data){
-	    if(data == 'ok'){
+	    //if(data == 'ok'){
                 location.reload();
-        }else{
+       //}else{
            
-            alert('No s\' ha pogut actualitzar');
-        }
+          // alert('No s\' ha pogut actualitzar');
+        //}
         });
     }
     </script>
