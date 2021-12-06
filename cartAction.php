@@ -42,6 +42,13 @@
         $sentencia= "insert into Pedido (precio_total, creado) VALUES ('".$cart->total()."', '".$data."')";
         $resultado=executaSentencia($conexion,$sentencia);
         
+        
+        // Sumar el importe total
+        $sentencia = "select sum(precio_total) as recaudado from Pedido";
+        $resultado=executaSentencia($conexion,$sentencia);
+        
+        $_SESSION['total_recaudado']=$resultado['recaudado'];
+       
         $sentencia = "select * from Pedido where precio_total=\"". $cart->total(). "\" and creado=\"". $data."\"";
         $resultado=executaSentencia($conexion, $sentencia);
 
