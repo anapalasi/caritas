@@ -1,7 +1,9 @@
 <?php
+	
+	require 'Cart.php';
 	session_start();
 
-	include 'Cart.php';
+	
 	
 	echo " <!DOCTYPE html>";
 	echo "<html lang=\"ca\">";
@@ -88,7 +90,13 @@
 									echo "<a class=\"dropdown-toggle\" data-toggle=\"dropdown\" aria-expanded=\"true\">";
 									echo "<i class=\"fa fa-shopping-cart\"></i>";
 										echo "<span> Tu compra</span>";
-										echo "<div class=\"qty\"></div>";
+										if (isset($_SESSION['cesta'])){
+											
+											echo "<div class=\"qty\">";
+											echo $_SESSION['cart_contents']['total_items'];
+											// echo $cesta["total_items"];
+											echo "</div>";
+										}
 									echo "</a>";
 									echo "<div class=\"cart-dropdown\">";
 										echo "<div class=\"cart-list\">";
@@ -115,8 +123,12 @@
 											echo "</div>";
 										echo "</div>";
 										echo "<div class=\"cart-summary\">";
-											echo "<small>3 Item(s) selected</small>";
-											echo "<h5>SUBTOTAL: $2940.00</h5>";
+											echo "<small> ";
+											echo $_SESSION['cart_contents']['total_items'];
+											echo " producte(s) seleccionats</small>";
+											echo "<h5>SUBTOTAL: ";
+											echo $_SESSION['cart_contents']['cart_total'];	
+											echo "€ </h5>";
 										echo "</div>";
 										echo "<div class=\"cart-btns\">";
 											echo "<a href=\"viewCart.php\"> Ver cesta</a>";

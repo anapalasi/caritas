@@ -43,6 +43,13 @@
             return $this->cart_contents['total_items'];
         }
 
+        /** Guardar variables de sesion
+         * 
+         */
+        public function guardarVariablesSesion(){
+            $_SESSION['total_items']= $this->total_items();
+            $_SESSION['precio_total'] = $this->total();
+        }
         /**
          * Devolver el precio total
          * @return int
@@ -130,6 +137,7 @@
                 }
                 // save cart data
                 $this->save_cart();
+               
                 return TRUE;
             }
         }
