@@ -139,7 +139,7 @@
 										echo "</div>";
 										echo "<div class=\"cart-btns\">";
 											echo "<a href=\"viewCart.php\"> Ver cesta</a>";
-											echo "<a href=\"#\">Comprar  <i class=\"fa fa-arrow-circle-right\"></i></a>";
+											echo "<a href=\"checkout.php\">Comprar  <i class=\"fa fa-arrow-circle-right\"></i></a>";
 										echo "</div>";
 									echo "</div>";
 								echo "</div>";
