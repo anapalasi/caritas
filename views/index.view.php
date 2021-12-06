@@ -1,9 +1,13 @@
 <?php
 	
-	require 'Cart.php';
 	session_start();
 
+	require 'admin/config.php';
+    //require 'functions.php';
 	
+	include 'Cart.php';
+	
+	$conexion=conexion($bd_config);
 	
 	echo " <!DOCTYPE html>";
 	echo "<html lang=\"ca\">";
@@ -225,7 +229,8 @@
 								</li>
 							</ul> */
 							echo "<h2 class=\"text-uppercase\">Fons recaudats</h2>";
-							echo "<p>0€</p>";
+							echo "<p>";
+							echo "</p>";
 							echo "<a class=\"primary-btn cta-btn\" href=\"#\">Llistat productes donats</a>";
 						echo "</div>";
 					echo "</div>";

@@ -36,11 +36,18 @@
     }elseif($_REQUEST['action'] == 'removeCartItem' && !empty($_REQUEST['id'])){
         $deleteItem = $cart->remove($_REQUEST['id']);
         header("Location: viewCart.php");
-    }elseif($_REQUEST['action'] == 'placeOrder' && $cart->total_items() > 0 && !empty($_SESSION['sessCustomerID'])){
+    }elseif($_REQUEST['action'] == 'placeOrder' && $cart->total_items() > 0){
         // insert order details into database
-        $insertOrder = $db->query("INSERT INTO orders (customer_id, total_price, created, modified) VALUES ('".$_SESSION['sessCustomerID']."', '".$cart->total()."', '".date("Y-m-d H:i:s")."', '".date("Y-m-d H:i:s")."')");
+        $data=date("Y-m-d H:i:s");
+        $sentencia= "insert into Pedido (precio_total, creado) VALUES ('".$cart->total()."', '".$data."')";
+        $resultado=executaSentencia($conexion,$sentencia);
         
-        if($insertOrder){
+        $sentencia = "select * from Pedido where precio_total=\"". $cart->total(). "\" and creado=\"". $data."\"";
+        $resultado=executaSentencia($conexion, $sentencia);
+
+        echo $data. " ". var_dump($resultado);
+
+ /*   if($insertOrder){
             $orderID = $db->insert_id;
             $sql = '';
             // get cart items
@@ -59,7 +66,7 @@
             }
         }else{
             header("Location: checkout.php");
-        }
+        }*/
     }else{
         header("Location: index.php");
     }
