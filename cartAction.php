@@ -19,6 +19,7 @@
             'id' => $row['id_producto'],
             'name' => $row['descripcion'],
             'price' => $row['precio'],
+            'img' => $row['imagen'],
             'qty' => 1
         );
         // Insertamos el producto en la cesta

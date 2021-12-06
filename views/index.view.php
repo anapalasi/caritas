@@ -94,33 +94,36 @@
 											
 											echo "<div class=\"qty\">";
 											echo $_SESSION['cart_contents']['total_items'];
-											// echo $cesta["total_items"];
+											//echo var_dump($_SESSION['cart_contents']);
 											echo "</div>";
 										}
 									echo "</a>";
 									echo "<div class=\"cart-dropdown\">";
 										echo "<div class=\"cart-list\">";
-											echo "<div class=\"product-widget\">";
-												echo "<div class=\"product-img\">";
-													echo "<img src=\"./img/product01.png\" alt=\"\">";
-												echo "</div>";
-												echo "<div class=\"product-body\">";
-													echo "<h3 class=\"product-name\"><a href=\"#\">product name goes here</a></h3>";
-													echo "<h4 class=\"product-price\"><span class=\"qty\">1x</span>$980.00</h4>";
-												echo "</div>";
-												echo "<button class=\"delete\"><i class=\"fa fa-close\"></i></button>";
-											echo "</div>";
+											foreach ($_SESSION['cart_contents'] as $clave => $valor){
+												if ((strcmp($clave,"total_items")!= 0 ) and (strcmp($clave,"cart_total")!=0))	{
+													echo "<div class=\"product-widget\">";
+													echo "<div class=\"product-img\">";
+														echo "<img src=\"./img/";
+														echo $valor["img"]. "\" alt=\"\">";
+													echo "</div>";
+													echo "<div class=\"product-body\">";
+														echo "<h4 class=\"product-name\"><a href=\"#\">";
+														echo $valor["name"] . "</a></h4>";
+														echo "<h4 class=\"product-price\"><span class=\"qty\">";
+														echo $valor['qty'] ."x</span>";
+														echo $valor['price'] ."€</h4>";
+													echo "</div>";
+													//echo "<button class=\"delete\"><i class=\"fa fa-close\"></i></button>";
+													echo "</div>";
 
-											echo "<div class=\"product-widget\">";
-												echo "<div class=\"product-img\">";
-													echo "<img src=\"./img/product02.png\" alt=\"\">";
-												echo "</div>";
-												echo "<div class=\"product-body\">";
-													echo "<h3 class=\"product-name\"><a href=\"#\">product name goes here</a></h3>";
-													echo "<h4 class=\"product-price\"><span class=\"qty\">3x</span>$980.00</h4>";
-												echo "</div>";
-												echo "<button class=\"delete\"><i class=\"fa fa-close\"></i></button>";
-											echo "</div>";
+												}
+											}
+										
+												
+											
+
+											
 										echo "</div>";
 										echo "<div class=\"cart-summary\">";
 											echo "<small> ";
