@@ -91,11 +91,15 @@
 									echo "<i class=\"fa fa-shopping-cart\"></i>";
 										echo "<span> Tu compra</span>";
 										if (isset($_SESSION['cesta'])){
+											$numero_items=$_SESSION['cart_contents']['total_items'];
+
+											if ($numero_items !=0){
+												echo "<div class=\"qty\">";
+												echo $numero_items;
+												//echo var_dump($_SESSION['cart_contents']);
+												echo "</div>";
+											}
 											
-											echo "<div class=\"qty\">";
-											echo $_SESSION['cart_contents']['total_items'];
-											//echo var_dump($_SESSION['cart_contents']);
-											echo "</div>";
 										}
 									echo "</a>";
 									echo "<div class=\"cart-dropdown\">";
