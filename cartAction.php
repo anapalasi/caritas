@@ -42,6 +42,8 @@
         $sentencia= "insert into Pedido (precio_total, creado) VALUES ('".$cart->total()."', '".$data."')";
         $resultado=executaSentencia($conexion,$sentencia);
         
+        $id_pedido= $conexion->lastInsertId();
+                     
         
         // Sumar el importe total
         $sentencia = "select sum(precio_total) as recaudado from Pedido";
@@ -49,31 +51,21 @@
         
         $_SESSION['total_recaudado']=$resultado['recaudado'];
        
-        $sentencia = "select * from Pedido where precio_total=\"". $cart->total(). "\" and creado=\"". $data."\"";
-        $resultado=executaSentencia($conexion, $sentencia);
+        // Insertaremos los elementos de la cesta de la compra
+        $cesta = $cart->contents();
 
-        echo $data. " ". var_dump($resultado);
-
- /*   if($insertOrder){
-            $orderID = $db->insert_id;
-            $sql = '';
-            // get cart items
-            $cartItems = $cart->contents();
-            foreach($cartItems as $item){
-                $sql .= "INSERT INTO order_items (order_id, product_id, quantity) VALUES ('".$orderID."', '".$item['id']."', '".$item['qty']."');";
-            }
-            // insert order items into database
-            $insertOrderItems = $db->multi_query($sql);
+        foreach ($cesta as $producto){
+            $sentencia = "insert into LineaPedido (id_pedido, id_producto, precio,cantidad) values ('";
+            $sentencia = $sentencia . $id_pedido. "','". $producto['id']. "','". $producto['price']."','";
+            $sentencia = $sentencia. $producto['qty']. "')";
             
-            if($insertOrderItems){
-                $cart->destroy();
-                header("Location: orderSuccess.php?id=$orderID");
-            }else{
-                header("Location: checkout.php");
-            }
-        }else{
-            header("Location: checkout.php");
-        }*/
+            executaSentencia($conexion, $sentencia);
+        }
+        $cart->destroy();
+        header("Location: orderSuccess.php?id=$id_pedido");
+    
+
+
     }else{
         header("Location: index.php");
     }

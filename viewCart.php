@@ -6,7 +6,7 @@ $cart = new Cart();
 
 // Creamos la variable de sesion
 if (!isset($SESSION['cesta']))
-    $_SESSION['cesta']=$cart;
+    $_SESSION['cesta']=serialize($cart);
 ?>
 <!DOCTYPE html>
 <html lang="en">

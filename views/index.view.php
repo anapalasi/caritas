@@ -232,7 +232,7 @@
 							else
 								echo  $_SESSION['total_recaudado']. "€";
 							echo "</strong></p>";
-							echo "<a class=\"primary-btn cta-btn\" href=\"#\">Llistat productes donats</a>";
+							echo "<a class=\"primary-btn cta-btn\" href=\"llistatproductes.php\">Llistat productes donats</a>";
 						echo "</div>";
 					echo "</div>";
 				echo "</div>";
