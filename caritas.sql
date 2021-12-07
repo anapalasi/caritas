@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Temps de generació: 04-12-2021 a les 21:02:30
+-- Temps de generació: 07-12-2021 a les 11:29:02
 -- Versió del servidor: 8.0.27-0ubuntu0.20.04.1
 -- Versió de PHP: 7.4.3
 
@@ -49,36 +49,14 @@ INSERT INTO `Categoria` (`id_categoria`, `descripcion`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `CestaCompra`
---
-
-CREATE TABLE `CestaCompra` (
-  `id_cesta` int NOT NULL,
-  `fecha` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Estructura de la taula `LineaCesta`
---
-
-CREATE TABLE `LineaCesta` (
-  `id_cesta` int NOT NULL,
-  `id_producto` int NOT NULL,
-  `cantidad` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Estructura de la taula `LineaPedido`
 --
 
 CREATE TABLE `LineaPedido` (
   `id_pedido` int NOT NULL,
   `id_producto` int NOT NULL,
-  `precio` float NOT NULL
+  `precio` float NOT NULL,
+  `cantidad` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -89,7 +67,7 @@ CREATE TABLE `LineaPedido` (
 
 CREATE TABLE `Pedido` (
   `id_pedido` int NOT NULL,
-  `fecha` date NOT NULL,
+  `creado` date NOT NULL,
   `precio_total` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -151,19 +129,6 @@ ALTER TABLE `Categoria`
   ADD PRIMARY KEY (`id_categoria`);
 
 --
--- Índexs per a la taula `CestaCompra`
---
-ALTER TABLE `CestaCompra`
-  ADD PRIMARY KEY (`id_cesta`);
-
---
--- Índexs per a la taula `LineaCesta`
---
-ALTER TABLE `LineaCesta`
-  ADD PRIMARY KEY (`id_cesta`,`id_producto`),
-  ADD KEY `id_producto` (`id_producto`);
-
---
 -- Índexs per a la taula `LineaPedido`
 --
 ALTER TABLE `LineaPedido`
@@ -194,22 +159,10 @@ ALTER TABLE `Categoria`
   MODIFY `id_categoria` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT per la taula `CestaCompra`
---
-ALTER TABLE `CestaCompra`
-  MODIFY `id_cesta` int NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT per la taula `LineaCesta`
---
-ALTER TABLE `LineaCesta`
-  MODIFY `id_cesta` int NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT per la taula `Pedido`
 --
 ALTER TABLE `Pedido`
-  MODIFY `id_pedido` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pedido` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT per la taula `Producto`
@@ -220,13 +173,6 @@ ALTER TABLE `Producto`
 --
 -- Restriccions per a les taules bolcades
 --
-
---
--- Restriccions per a la taula `LineaCesta`
---
-ALTER TABLE `LineaCesta`
-  ADD CONSTRAINT `LineaCesta_ibfk_1` FOREIGN KEY (`id_producto`) REFERENCES `Producto` (`id_producto`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `LineaCesta_ibfk_2` FOREIGN KEY (`id_cesta`) REFERENCES `CestaCompra` (`id_cesta`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Restriccions per a la taula `LineaPedido`
