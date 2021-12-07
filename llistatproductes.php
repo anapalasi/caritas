@@ -88,7 +88,11 @@ $conexion=conexion($bd_config);
         ?>
     </tbody>
     </table>
-  
+    <?php
+        $sentencia = "select sum(precio_total) as donat from Pedido";
+        $resultat=executaSentencia($conexion, $sentencia);
+    ?>
+    <h3>&nbsp; &nbsp; &nbsp;Total donat: <?php echo $resultat['donat']; ?> €</h3>
     <div class="footBtn">
         <a href="index.php" class="btn btn-warning"><i class="glyphicon glyphicon-menu-left"></i> Continua comprant</a>
     </div>
