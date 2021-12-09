@@ -79,7 +79,7 @@ if($cart->total_items() <= 0){
             foreach($cartItems as $item){
         ?>
         <tr>
-            <td><?php echo $item["name"]; ?></td>
+            <td><?php echo utf8_encode($item["name"]); ?></td>
             <td><?php echo $item["price"].' €'; ?></td>
             <td><?php echo $item["qty"]; ?></td>
             <td><?php echo $item["subtotal"].' €'; ?></td>
