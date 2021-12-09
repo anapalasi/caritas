@@ -114,7 +114,7 @@
 													echo "</div>";
 													echo "<div class=\"product-body\">";
 														echo "<h4 class=\"product-name\"><a href=\"#\">";
-														echo $valor["name"] . "</a></h4>";
+														echo utf8_encode($valor["name"]) . "</a></h4>";
 														echo "<h4 class=\"product-price\"><span class=\"qty\">";
 														echo $valor['qty'] ."x</span>";
 														echo $valor['price'] ."€</h4>";

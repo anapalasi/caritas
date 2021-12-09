@@ -77,7 +77,7 @@ $conexion=conexion($bd_config);
                 $resultat2=executaSentencia($conexion, $sentencia);
                 echo "<tr>";
                 echo "<td><img src=\"img/" . $resultat2['imagen']. "\" width=\"100\"></td>";
-                echo "<td>" . $resultat2['descripcion']. "</td>";
+                echo "<td>" . utf8_encode($resultat2['descripcion']). "</td>";
                 echo "<td>" . $producte['cantidad']. "</td>";
                 echo "</tr>";
                 $cantidad++;
