@@ -40,13 +40,21 @@ if(!isset($_REQUEST['id'])){
 				<div class="container">
 					<!-- row -->
 					<div class="row">
+						<table border="0" width="100%">
 						<!-- LOGO -->
-								<div class="header-logo">
-								<a href="#" class="logo">
-									<img src="./img/logo.jpg" alt="" width="200">
-								</a>
-							    </div>
-							<h3 style="color:white; line-height: 200px;"> &nbsp; &nbsp; &nbsp;Recollida solidària d'aliments Maite Bueso</h3>
+							<tr>
+								<td>
+									<div class="header-logo">
+										<a href="#" class="logo">
+										<img src="./img/logo.jpg" alt="" width="200">
+									</a>
+								    </div>
+								</td>
+								<td>
+									<h4 style="color:white; line-height:100px;"> &nbsp; &nbsp; &nbsp;Recollida solidària d'aliments Maite Bueso</h3>
+								</td>
+							</tr>
+						</table>
 
 						
 						

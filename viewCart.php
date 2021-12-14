@@ -63,14 +63,24 @@ if (!isset($SESSION['cesta']))
 					<!-- row -->
 					<div class="row">
 						<!-- LOGO -->
-								<div class="header-logo">
-								<a href="#" class="logo">
-									<img src="./img/logo.jpg" alt="" width="200">
-								</a>
-							    </div>
-							<h3 style="color:white; line-height: 200px;"> &nbsp; &nbsp; &nbsp;Recollida solidària d'aliments Maite Bueso</h3>
-
-						
+						<table border="0" width="100%">
+							<!-- <div class="col-lg-3"> -->
+							<tr>
+								<td>
+									<div class="header-logo">
+									<a href="#" class="logo">
+										<img src="./img/logo.jpg" alt="" width="200">
+									</a>
+								        </div>
+					<!--		</div>-->
+								</td>
+								<td>
+									<!-- < div class="col-lg-9"> -->
+									<h4 style="color:white; line-height: 100px;"> &nbsp; &nbsp; &nbsp;Recollida solidària d'aliments Maite Bueso</h3>
+							<!--	</div> -->
+								</td>
+								</tr>
+								</table>
 						
 					</div>
 					<!-- row -->

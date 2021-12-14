@@ -57,7 +57,7 @@
 	
 							//<!-- SEARCH BAR -->
 							echo "<div class=\"col-md-6\">";
-								echo "<h3 style=\"color:white; line-height: 200px;\">Recollida solidària d'aliments Maite Bueso</h3>";
+								echo "<h3 style=\"color:white; line-height: 100px;\">Recollida solidària d'aliments Maite Bueso</h3>";
 							/*	<div class="header-search">
 									<form>
 										<select class="input-select">
