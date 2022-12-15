@@ -57,7 +57,7 @@
 	
 							//<!-- SEARCH BAR -->
 							echo "<div class=\"col-md-6\">";
-								echo "<h3 style=\"color:white; line-height: 100px;\">Recollida solidària d'aliments de Torrenova</h3>";
+								echo "<h3 style=\"color:white; line-height: 100px;align:center\">Recollida solidària d'aliments de Torrenova</h3>";
 							/*	<div class="header-search">
 									<form>
 										<select class="input-select">
