@@ -49,7 +49,7 @@
 							echo "<div class=\"col-md-3\">";
 								echo "<div class=\"header-logo\">";
 									echo "<a href=\"#\" class=\"logo\">";
-										echo "<img src=\"./img/torrenova.png.png\" alt=\"\" width=\"200\">";
+										echo "<img src=\"./img/logo.jpg\" alt=\"\" width=\"200\">";
 									echo "</a>";
 								echo "</div>";
 							echo "</div>";
