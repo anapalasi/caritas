@@ -1,6 +1,9 @@
 <?php
 	
-	session_start();
+	if(!isset($_SESSION)) 
+    	{ 
+        	session_start(); 
+    	} 
 
 	
 	include 'Cart.php';
@@ -91,7 +94,7 @@
 									echo "<a class=\"dropdown-toggle\" data-toggle=\"dropdown\" aria-expanded=\"true\">";
 									echo "<i class=\"fa fa-shopping-cart\"></i>";
 										echo "<span> La teua compra</span>";
-										if (isset($_SESSION['cesta'])){
+										if (isset($_SESSION['cesta']) && isset($_SESSION['cart_contents'])){
 											$numero_items=$_SESSION['cart_contents']['total_items'];
 
 											if ($numero_items !=0){
@@ -984,7 +987,7 @@ echo "</div>";
 									echo "<li><a href=\"#\"><i class=\"fa fa-map-marker\"></i>Carrer del Convent.<br>  La Vall d'Uixó</a></li>";
 									echo "<li><a href=\"#\"><i class=\"fa fa-phone\"></i>964 66 05 23</a></li>";
 									echo "<li><a href=\"#\"><i class=\"fa fa-envelope-o\"></i>acsocial@caritas-sc.org</a></li>";
-									echo "<li><a href=\"#\"><i class=\"fa fa-home\"></i>www.caritas.es</a></li>";
+									echo "<li><a href=\"http://www.caritas.es\"><i class=\"fa fa-home\"></i> www.caritas.es</a></li>";
 
 								echo "</ul>";
 							echo "</div>";
