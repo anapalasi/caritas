@@ -12,7 +12,7 @@
 		echo "<meta charset=\"utf-8\">";
 		echo "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">";
 		echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
-		echo "<title> Recollida solidària d'aliments Caritas</title>";
+		echo "<title> Recollida solidària d'aliments Memorial Maite Bueso </title>";
 		echo "<link href=\"https://fonts.googleapis.com/css?family=Montserrat:400,500,700\" rel=\"stylesheet\">";
 		echo "<link type=\"text/css\" rel=\"stylesheet\" href=\"css/bootstrap.min.css\"/>";
 		echo "<link type=\"text/css\" rel=\"stylesheet\" href=\"css/slick.css\"/>";
