@@ -51,7 +51,7 @@ if(!isset($_REQUEST['id'])){
 								    </div>
 								</td>
 								<td>
-									<h4 style="color:white; line-height:100px;"> &nbsp; &nbsp; &nbsp;Recollida solidària d'aliments Maite Bueso</h3>
+									<h4 style="color:white; line-height:100px;"> &nbsp; &nbsp; &nbsp;Recollida solidària d'aliments de Caritas</h3>
 								</td>
 							</tr>
 						</table>

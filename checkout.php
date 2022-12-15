@@ -55,7 +55,7 @@ if($cart->total_items() <= 0){
                                                                 </td>
                                                                 <td>
                                                                         <!-- < div class="col-lg-9"> -->
-                                                                        <h4 style="color:white; line-height: 100px;"> &nbsp; &nbsp; &nbsp;Recollida solidària d'aliments Maite Bueso</h3>
+                                                                        <h4 style="color:white; line-height: 100px;"> &nbsp; &nbsp; &nbsp;Recollida solidària d'aliments de Caritas</h3>
                                                         <!--    </div> -->
                                                                 </td>
                                                                 </tr>

@@ -33,7 +33,7 @@ if (!isset($SESSION['cesta']))
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
 <!-- Custom stlylesheet -->
-<link type="text/css" rel="stylesheet" href="css/style.css"/>
+ẁ<link type="text/css" rel="stylesheet" href="css/style.css"/>
     <style>
     .container{padding: 50px;}
     input[type="number"]{width: 20%;}
@@ -76,7 +76,7 @@ if (!isset($SESSION['cesta']))
 								</td>
 								<td>
 									<!-- < div class="col-lg-9"> -->
-									<h4 style="color:white; line-height: 100px;"> &nbsp; &nbsp; &nbsp;Recollida solidària d'aliments Maite Bueso</h3>
+									<h4 style="color:white; line-height: 100px;"> &nbsp; &nbsp; &nbsp;Recollida solidària d'aliments de Caritas</h3>
 							<!--	</div> -->
 								</td>
 								</tr>
