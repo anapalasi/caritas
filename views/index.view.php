@@ -49,7 +49,7 @@
 							echo "<div class=\"col-md-3\">";
 								echo "<div class=\"header-logo\">";
 									echo "<a href=\"#\" class=\"logo\">";
-										echo "<img src=\"./img/logo.jpg\" alt=\"\" width=\"200\">";
+										echo "<img src=\"./img/torrenova.png.png\" alt=\"\" width=\"200\">";
 									echo "</a>";
 								echo "</div>";
 							echo "</div>";
@@ -57,7 +57,7 @@
 	
 							//<!-- SEARCH BAR -->
 							echo "<div class=\"col-md-6\">";
-								echo "<h3 style=\"color:white; line-height: 100px;\">Recollida solidària d'aliments Maite Bueso</h3>";
+								echo "<h3 style=\"color:white; line-height: 100px;\">Recollida solidària d'aliments de Torrenova</h3>";
 							/*	<div class="header-search">
 									<form>
 										<select class="input-select">
