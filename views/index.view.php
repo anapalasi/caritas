@@ -90,7 +90,7 @@
 								echo "<div class=\"dropdown\">";
 									echo "<a class=\"dropdown-toggle\" data-toggle=\"dropdown\" aria-expanded=\"true\">";
 									echo "<i class=\"fa fa-shopping-cart\"></i>";
-										echo "<span> Tu compra</span>";
+										echo "<span> La teua compra</span>";
 										if (isset($_SESSION['cesta'])){
 											$numero_items=$_SESSION['cart_contents']['total_items'];
 
