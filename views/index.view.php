@@ -984,7 +984,7 @@ echo "</div>";
 									echo "<li><a href=\"#\"><i class=\"fa fa-map-marker\"></i>Carrer del Convent.<br>  La Vall d'Uixó</a></li>";
 									echo "<li><a href=\"#\"><i class=\"fa fa-phone\"></i>964 66 05 23</a></li>";
 									echo "<li><a href=\"#\"><i class=\"fa fa-envelope-o\"></i>acsocial@caritas-sc.org</a></li>";
-									echo "<li><a href=\"#\"><i class=\"fa fa-www\"></i>www.caritas.es</a></li>";
+									echo "<li><a href=\"#\"><i class=\"fa fa-home\"></i>www.caritas.es</a></li>";
 
 								echo "</ul>";
 							echo "</div>";
