@@ -1,7 +1,10 @@
 <?php
 // initializ shopping cart class
 require 'Cart.php';
-session_start();
+ if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
 $cart = new Cart();
 
 // Creamos la variable de sesion
