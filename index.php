@@ -1,7 +1,9 @@
 <?php
 
     session_start();
-
+/*foreach (getallheaders() as $name => $value) {
+    echo "$name: $value\n";
+    }*/
     require 'admin/config.php';
 	require 'functions.php';
 

@@ -24,7 +24,7 @@
         );
         // Insertamos el producto en la cesta
         $insertItem = $cart->insert($itemData);
-        $redirectLoc = $insertItem?'viewCart.php':'index.php';
+	$redirectLoc = $insertItem?'viewCart.php':'index.php';
         header("Location: ".$redirectLoc);
     }elseif($_REQUEST['action'] == 'updateCartItem' && !empty($_REQUEST['id'])){
         $itemData = array(
@@ -72,6 +72,6 @@
 }else{
     header("Location: index.php");
 }
-        
+?>        
        
   

@@ -1,9 +1,10 @@
-<?php 
-    if(!isset($_SESSION)) 
+<?php
+    //if (session_status() !== PHP_SESSION_ACTIVE)
+// if(!isset($_SESSION))
+    if (empty(session_id()) && !headers_sent()) 
     { 
         session_start(); 
     } 
-
     class Cart {
 
         protected $cart_contents = array();
@@ -189,3 +190,4 @@
         unset($_SESSION['cart_contents']);
     }
 }
+?>

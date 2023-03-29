@@ -10,4 +10,3 @@ $bd_config = array(
 );
 
 ?>
-
